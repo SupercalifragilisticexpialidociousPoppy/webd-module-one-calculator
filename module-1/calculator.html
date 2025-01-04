@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="StyleSheet", href="./calculator.css">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="output-display">
+        <p id="small-display"></p>
+        <p id="big-display"></p>
+    </div>
+    <br>
+    <div id="input-display">
+        <button onclick="answer()"> Ans </button>
+        <button onclick="clear()">C</button>
+        <button onclick="clearnum()">CE</button>
+        <button onclick="backspace()" style="letter-spacing: -1vw;"><-</button>
+
+        <button onclick="inpnum(7)">7</button>
+        <button onclick="inpnum(8)">8</button> 
+        <button onclick="inpnum(9)">9</button>
+        <button onclick="oper('/')">/</button>
+
+        <button onclick="inpnum(4)">4</button>
+        <button onclick="inpnum(5)">5</button>
+        <button onclick="inpnum(6)">6</button>
+        <button onclick="oper('*')">*</button>
+
+        <button onclick="inpnum(1)">1</button>
+        <button onclick="inpnum(2)">2</button>
+        <button onclick="inpnum(3)">3</button>
+        <button onclick="oper('-')">-</button>
+
+        <button onclick="inpnum('.')">.</button>
+        <button onclick="inpnum(0)">0</button>
+        <button onclick="execute()">=</button>
+        <button onclick="oper('+')">+</button>
+    </div>
+
+<script src="./calculator.js"></script>
+</body>
+</html>
