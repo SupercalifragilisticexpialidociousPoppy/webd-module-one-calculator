@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(75, 75, 75, 0.7);
+    box-sizing: border-box;
+    
+    font-family: "Press Start 2P", courier;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url("./Screenshot\ 2025-01-03\ 125933.png");
+    /* Art by NOP_Pixels
+    https://www.instagram.com/p/CUAl43JID_S/
+    https://pixel-art.jp/05/ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#output-display, #input-display {
+    border: 0;
+    background-color: rgb(255, 255, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#output-display {
+    height: 26.75vh;
+    width: 96.6vw;
+    margin-top: 3.25vh;
+    margin-bottom: 0;
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+    border-radius: 0.5vh;
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 2vh 1.5vw;
+}
+
+
+
+#input-display {
+    height: 67.5vh;
+    width: 100vw;
+}
+
+button {
+    width: 24vw;
+    height: 12vh;
+    font-size: min(5vh, 5vw);
+    background-color: rgba(245, 245, 245, 0.8);
+    border-width: 0.5vh;
+    border-radius: 0.5vw;
+    border-style: solid;
+    border-color: rgb(75, 75, 75, 0.1);
+    margin: 0.75vh 0.5vw;
+    transition-duration: 0.25s;
+    cursor: pointer;   
+}
+
+button:hover {
+    background-color: rgba(219, 219, 219, 0.4);
+    border-color: rgb(75, 75, 75, 0.6);
+    color: rgb(75, 75, 75, 0.7);
+}
+
+button:active {
+    background-color: rgba(219, 219, 219, 0.8);
+    border-color: rgb(75, 75, 75);
+    color: rgb(75, 75, 75);
+}
+
+#big-display {
+    width: 90vw;
+    height: 15vh;
+    font-size: min(12.5vw, 12.5vh);
+    text-align: right;
+    overflow: auto;
+}
+
+#small-display {
+    width: 90vw;
+    height: 7vh;
+    font-size: min(5vw, 5vh);
+    overflow: auto;
+}
