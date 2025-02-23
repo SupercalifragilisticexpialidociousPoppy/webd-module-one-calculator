@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "Rufina", serif;
+    font-weight: 400;
+    font-style: normal;
+} body {
+    background-image: url("./body_wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black
+} a:hover {
+    text-decoration: underline;
+}
+
+#title {
+    z-index: 10;
+    position: fixed;
+
+    width: 50vw;
+    height: 30vh;
+    text-align: center;
+    right: 25vw;
+    bottom: 50vh;
+    
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8em;
+
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+#errorHandle {
+    z-index: 11;
+    position: fixed;
+    background-color: rgb(255, 255, 255, 0.9);
+    width: 50vw;
+    height: 50vh;
+    bottom: 40vh;
+    right: 25vw;
+
+    border-radius: 20px;
+
+    display: none;
+} #errorStatus {
+    width: 100%;
+    height: 50%;
+    padding: 10%;
+    font-size: 5em;
+    text-align: center;
+} #errorMessage {
+    width: 90%;
+    height: 39%;
+    padding: 5%;
+    margin: 5%;
+    font-size: 1em;
+    border-radius: 20px;
+    
+    box-shadow: 
+    5px 5px 10px #d1c4b8,
+    -5px -5px 10px #d1c4b8;
+}
+
+#noRepos {
+    z-index: 10;
+    position: fixed;
+
+    width: 50vw;
+    height: 30vh;
+    text-align: center;
+    right: 25vw;
+    bottom: 50vh;
+    
+    font-family: "Amarante", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8em;
+
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    opacity: 1;
+}
+
+#repoList {
+    border-radius: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    width: 63vw;
+    margin: 1vw;
+    transition-duration: 1s;   
+    background-color: rgba(128, 128, 128, 0.3);
+
+    visibility: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} .resultList::-webkit-scrollbar {
+    display: none;
+} #repoList:hover {
+    box-shadow: 
+    3.5px 3.5px 7px #cfccc9,
+    -3.5px -3.5px 7px #cfccc9;
+}
+
+.repoCard {
+    width: 50vw;
+    height: 150px;
+    margin: 1vh;   
+    padding: 1%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: 12px;
+    background-color: rgba(209, 196, 184, 0.4);
+    transition-duration: 0.3s;
+    cursor: pointer;
+    box-shadow: 
+    0.5px 0.5px 1px #d1c4b8,
+    -0.5px -0.5px 1px #d1c4b8;
+}.stupiddiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}.repoCard_ifFork {
+    width: 110px;
+    font-size: 0.75em;
+}.repoCard_title {
+    display:block;
+    font-size: 2.5em;
+}.repoCard_description {
+    display: block;
+    font-size: 1.2em;
+    
+}.repoCard_stats {
+    flex: 1;
+    font-size: 0.75em;
+    display: inline;
+    text-align: right;
+}.repoCard:hover {
+    box-shadow: 
+    1px 1px 2px #cfccc9,
+    -1px -1px 2px #cfccc9;
+}
+
+.publicinfo {
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    width: 33vw;
+    transition-duration: 1s;
+    background-color: rgba(128, 128, 128, 0.3);    
+
+    visibility: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} .resultList::-webkit-scrollbar {
+    display: none;
+} .publicinfo:hover {
+    box-shadow: 
+    3.5px 3.5px 7px #cfccc9,
+    -3.5px -3.5px 7px #cfccc9;
+}
+.profile_span {
+    display: inline-block;
+    background-color: rgba(209, 196, 184,0.4);
+    text-align: right;
+    right: 0;
+    margin: 0;
+    width: 80%;
+} #profilePic {
+    width: 25vw;
+    height: 25vw;
+    margin-left:6vw;
+    right: 0;
+} #profile_nick {
+    font-size: 4.5rem;
+    
+} #profile_username {    
+    font-size: 2.5rem;
+}
+
+#Search_Results {
+    position: fixed;
+    right: 30vw;
+    width: 40vw;
+    bottom: 0;
+    height: 100vh;
+    background-color: rgba(57, 57, 57, 0.7);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    box-shadow: 
+    5px 0px 10px rgba(57, 57, 57, 0.7),
+    -5px 0px 10px rgba(57, 57, 57, 0.7);
+}
+.resultList {
+    position: fixed;
+    bottom: 155px;
+    right: 31vw;
+    height: 70vh;
+    width: 38vw;
+    z-index: 3;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2vw;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+} .resultList::-webkit-scrollbar {
+    display: none;
+}
+.resultListButton {
+    display: block;
+    width: 34vw;
+    height: 28px;
+    z-index: 104;
+    border: 0;
+    background-color: rgba(236, 220, 204, 0.6);
+    font-size: 1em;
+    cursor: pointer;
+} .resultListButton:hover {
+    background-color: rgba(236, 220, 204, 0.8);
+}
+
+#Searchbar {
+    font-size: 1.15em;
+    position: fixed;
+    bottom: 60px;
+    right: 35vw;
+    width: 30vw;
+    height: max(3.5vw, 42px);
+    border-radius: max(1.75vw, 21px);
+    z-index: 3;
+    text-align: center;
+    border: 0;
+    box-shadow: 
+    2.5px 2.5px 5px #d1c4b8,
+    -2.5px -2.5px 5px #d1c4b8;
+    opacity: 0.7;
+    transition: width 0.4s ease-in-out;
+    display: none;    
+} #Searchbar:hover {
+    opacity: 0.9;
+    box-shadow: 
+    5px 5px 10px #cdc3ba,
+    -5px -5px 10px #cdc3ba;
+}
+
+#SearchIcon {
+    position: fixed;
+    bottom: 60px;
+    right: 48.25vw;
+    width: max(3.5vw, 42px);
+    height: max(3.5vw, 42px);
+    z-index: 4;
+    visibility: visible;
+    background-image: url("./search_icon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: max(1.75vw, 21px);
+    border-width: 0;
+    opacity: 0.8;
+    transition-duration: 0.5s;
+    box-shadow: 
+    5px 5px 10px #d1c4b8,
+    -5px -5px 10px #d1c4b8;
+    display: block;
+} #SearchIcon:hover {
+    cursor: pointer;
+    box-shadow: 
+    10px 10px 20px #d1c4b8,
+    -10px -10px 20px #d1c4b8;
+}

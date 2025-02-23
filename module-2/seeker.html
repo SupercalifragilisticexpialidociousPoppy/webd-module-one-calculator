@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek</title>
+    <link rel="stylesheet" href="./seeker.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="title">Seeker</div>
+    <div id="errorHandle">
+        <div id="errorStatus">404</div>
+        <div id="errorMessage">and we hate the popo wanna kill us on the streets fo sure</div>
+    </div>
+    
+    <div id="repoList">
+        <div id="noRepos">No repositories.</div>
+        <!--<div class = "repoCard">
+            <div class="stupiddiv"><span class="repoCard_ifFork">ARCHIVED REPO</span>
+            <span class="repoCard_stats">🧵122 🌟223 👁️‍🗨️622</span></div>
+            <div class="repoCard_title"><a href="https://www.google.com">someStupidTitle</a></div>
+            <div class="repoCard_description"> description Lorem ipdiv dolor sit amet consectetur adipisicing elit. Iste, sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam dignissimos, in quas deleniti minima dolores facere reiciendis maxime dicta alias porro hic saepe voluptates soluta temporibus nesciunt! Atque, hic?</div>
+        </div>-->
+    </div>
+
+    <div class="publicinfo">
+        <div id="profilePic"></div>
+        <div class="profile_span" id="profile_nick">nick</div>
+        <div class="profile_span" id="profile_username">username</div>
+        <div class="profile_span" id="profile_bio">bio</div>
+        <br>
+        <div class="profile_span" id="profile_company">company</div>
+        <div class="profile_span" id="profile_location">location</div>
+        <div class="profile_span" id="profile_blog">blog</div>
+        <br>
+        <div class="profile_span" id="public_repo">number of repos</div>
+        <div class="profile_span" id="public_gist">number of gists</div>
+        <div class="profile_span" id="following">number following</div>
+        <div class="profile_span" id="followers">number of followers</div>
+        <div class="profile_span" id="birth">created at</div>
+    </div>
+    
+    <div class="Search">
+        <div id="Search_Results">
+            <div class="resultList">
+                <button class="resultListButton">...</button>
+                <button class="resultListButton">abcdefghijklmnopqrstuvwxyzabcdefghijklmno</button>
+                <button class="resultListButton">...</button>
+            </div>
+        </div>
+        <button id="SearchIcon" onclick="beginThisMotherfucker()"></button>
+        <input type="text" id="Searchbar">
+    </div>
+    
+
+    <script src="./seeker.js"></script>
+</body>
+</html>
